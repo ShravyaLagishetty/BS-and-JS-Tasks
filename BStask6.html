@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container " style="margin-top: 100px; width: 600px;background-color:rgb(250, 245, 245);">
+        <center><form action="" id="form1" style="width: 450px;">
+            <div class="form-group ">
+                <label for="" style="float:left;">Name</label>
+                <input class="form-control" type="text" id="name"required/><br>
+                <p style="color:red;text-align: left;" id="i1"></p>
+            </div>
+            <div class="form-group">
+                <label for="" style="float:left;">Email</label>
+                <input class="form-control" type="email" id="email" required/><br>
+                <p id="i2" style="color: red;text-align: left;"></p>
+            </div>
+            <div class="form-group">
+                <label for="" style="float:left;">Password</label>
+                <input class="form-control" type="password" id="password" required/> <br>
+                <p id="i3" style="color: red;text-align: left;"></p>   
+            </div>
+            <div class="form-group">
+                <label for="" style="float:left;">Hobbies</label>
+                <select class="form-control">
+                    <option value=""></option>
+                    <option value="Running">Running</option>
+                    <option value="Sleeping">Sleeping</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Dancing">Dancing</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <button type="submit" onclick="Alert1();Alert2();Alert3();Alert()" class="form-control" style="background-color: rgb(245, 65, 65);">Submit</button>
+            </div>
+            <br>
+        </form></center>
+    </div>
+    <script>
+        var l=0,m=0,n=0;
+        function Alert1()
+        {
+            var a=document.forms["form1"]["name"].value;
+            if(a=="")
+            {
+                document.getElementById("name").style.borderColor="red";
+                document.getElementById("i1").innerHTML="Name is required"
+                return false;
+            }
+            m=1;
+            return true;
+        }
+        function Alert2()
+        {
+            var a=document.forms["form1"]["email"].value;
+            if(a=="")
+            {
+                document.getElementById("email").style.borderColor="red";
+                document.getElementById("i2").innerHTML="Email is required"
+                return false;
+            }
+            l=1;
+            return true;
+        }
+        function Alert3()
+        {
+            var a=document.forms["form1"]["password"].value;
+            if(a=="")
+            {
+                document.getElementById("password").style.borderColor="red";
+                document.getElementById("i3").innerHTML="Password is required"
+                return false;
+            }
+            n=1;
+            return true;
+        }
+        function Alert()
+        {
+            if(l+m+n==3)
+            {
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+</html>

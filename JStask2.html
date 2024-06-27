@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter string:</label>
+        <input type="text" id="string">
+        <button type="button" onclick="arrange()">Sort</button><br><br>
+        <label>Alphabetical Order:</label>
+        <p id="sorted"></p>
+    </form>
+    <script>
+        function arrange()
+        {
+            let str=document.getElementById("string").value;
+            let strarr=str.split('');
+            let strsort=strarr.sort();
+            let sortedstr=strsort.join('');
+            document.getElementById("sorted").innerHTML=sortedstr;
+        }
+    </script>
+</body>
+</html>

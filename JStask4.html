@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task 4</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button type="button" onclick="showDate()" id="datebtn">show date</button><br>
+        <p id="p1"></p>
+        <button type="button" onclick="Time()" id="timebtn">show Time</button><br>
+        <p id="p2"></p>
+    </body>
+    <script>
+        function showDate()
+        {
+            const obj=new Date();
+            const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            document.getElementById("p1").innerHTML=obj.getDate()+"/"+String(month[obj.getMonth()])+"/"+String(obj.getFullYear());
+        }
+        function Time()
+        {
+            const date=new Date();
+            document.getElementById("p2").innerHTML=date;
+        }
+    </script>
+</html>

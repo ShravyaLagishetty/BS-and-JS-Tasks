@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task 3</title>
+        <style>
+            div
+            {
+                border:1px solid black;
+                width:400px;
+                height:200px;
+                margin-top: 200px;
+            }
+            form
+            {
+                float:left;
+                margin-left: 20px;
+            }
+            #p
+            {
+                margin-top: 150px;
+                text-align: left;
+                margin-left: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <center><div>
+            <form id="forms">
+                <br>
+                <label>1st Number:</label>
+                <input type="number" id="number1"><br><br>
+                <label>2nd Number:</label>
+                <input type="number" id="number2"><br><br>
+                <button onclick="multiply()" type="button" id="mulbtn" style="float: left;">Multiply</button>
+                <button onclick="divide()" type="button" id="divbtn" style="float:left;margin-left: 8px;">Divide</button>
+                
+            </form>
+            <p id="p"></p>
+            <script>
+                function multiply()
+                {
+                    var n1=document.getElementById("number1").value;
+                    var n2=document.getElementById("number2").value;
+                    var result=n1*n2;
+                    document.getElementById("mulbtn").style.borderColor="skyblue";
+                    document.getElementById("mulbtn").style.borderRadius="3px";
+                    document.getElementById("mulbtn").style.borderWidth="3px"
+                    document.getElementById("p").innerText="The Result Is:\n"+result;
+
+                }
+                function divide()
+                {
+                    var result1=n1/n2;
+                    document.getElementById("divbtn").style.borderColor="skyblue";
+                    document.getElementById("mulbtn").style.borderRadius="3px";
+                    document.getElementById("mulbtn").style.borderWidth="3px";
+                    document.getElementById("p").innerText="The Result Is:\n"+result1;
+                }
+
+            </script>
+        </div></center>
+    </body>
+</html>
